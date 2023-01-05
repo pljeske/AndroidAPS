@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="key_openapsama_max_daily_safety_multiplier" translatable="false">openapsama_max_daily_safety_multiplier</string>
+
+    <!-- START AutoISF ADAPTIONS -->
+    <string name="key_openapsama_smb_delivery_ratio" translatable="false">openapsama_smb_delivery_ratio</string>
+    <string name="key_openapsama_smb_delivery_ratio_min" translatable="false">openapsama_smb_delivery_ratio_min</string>
+    <string name="key_openapsama_smb_delivery_ratio_max" translatable="false">openapsama_smb_delivery_ratio_max</string>
+    <string name="key_openapsama_smb_delivery_ratio_bg_range" translatable="false">openapsama_smb_delivery_ratio_bg_range</string>
+    <string name="key_openapsama_smb_max_range_extension" translatable="false">openapsama_smb_max_range_extension</string>
+    <!-- END AutoISF ADAPTIONS -->
+
     <string name="key_openapsama_current_basal_safety_multiplier" translatable="false">openapsama_current_basal_safety_multiplier</string>
     <string name="key_openapsama_autosens_adjusttargets" translatable="false">autosens_adjust_targets</string>
     <string name="key_always_use_shortavg" translatable="false">always_use_shortavg</string>
@@ -9,6 +18,11 @@
     <string name="key_resistance_lowers_target" translatable="false">resistance_lowers_target</string>
     <string name="key_use_smb" translatable="false">use_smb</string>
     <string name="key_use_uam" translatable="false">use_uam</string>
+
+    <!-- START AutoISF ADAPTIONS -->
+    <string name="key_enable_autoISF" translatable="false">openapsama_enable_autoISF</string>
+    <!-- END AutoISF ADAPTIONS -->
+
     <string name="key_smb_interval" translatable="false">smbinterval</string>
     <string name="key_enableSMB_always" translatable="false">enableSMB_always</string>
     <string name="key_enableSMB_with_COB" translatable="false">enableSMB_with_COB</string>
@@ -24,6 +38,10 @@
     <string name="key_adjust_sensitivity" translatable="false">dynisf_adjust_sensitivity</string>
     <string name="key_openapsma_max_basal" translatable="false">openapsma_max_basal</string>
     <string name="key_openapsama_use_autosens" translatable="false">openapsama_useautosens</string>
+
+    <!-- START AutoISF ADAPTIONS -->
+    <string name="key_openapsama_enable_autoISF" translatable="false">openapsama_enable_autoISF</string>
+    <!-- END AutoISF ADAPTIONS -->
 
     <string name="dynisf_adjust_sensitivity">Adjust sensitivity and BG</string>
     <string name="DynISFAdjust_title" formatted="false">DynamicISF Adjustment Factor %</string>
@@ -65,6 +83,26 @@
     <string name="openapsma_autosensdata_label">Autosens data</string>
     <string name="openapsma_script_debug_data_label">Script debug</string>
     <string name="openapsama_use_autosens">Use Autosens feature</string>
+
+    <!-- START AutoISF ADAPTIONS -->
+    <string name="refresheventsfromnightscout">Refresh events from NS</string>
+    <string name="autoISF_settings_title">autoISF settings</string>
+    <string name="autoISF_settings_summary">autoISF allows to adapt the insulin sensitivity factor (ISF) in various scenarios of glucose behaviour</string>
+    <string name="acce_ISF_settings_title">acce_ISF settings</string>
+    <string name="acce_ISF_settings_summary">acce_ISF settings: adjust ISF for accelerating/decelerating blood glucose</string>
+    <string name="bg_ISF_settings_title">bg_ISF settings</string>
+    <string name="bg_ISF_settings_summary">bg_ISF settings: ISF depending on blood glucose level according to a predefined polynom</string>
+    <string name="pp_ISF_settings_title">pp_ISF settings</string>
+    <string name="pp_ISF_settings_summary">pp_ISF settings: ISF for postprandial (after meal) glucose rise</string>
+    <string name="delta_ISF_settings_title">delta_ISF settings</string>
+    <string name="delta_ISF_settings_summary">delta_ISF settings: ISF adaptations for positive delta, i.e. rising blood glucose</string>
+    <string name="dura_ISF_settings_title">dura_ISF settings</string>
+    <string name="dura_ISF_settings_summary">dura_ISF settings: ISF for blood glucose plateau above target</string>
+    <string name="smb_delivery_settings_title">smb delivery settings</string>
+    <string name="smb_delivery_settings_summary">smb delivery settings:  Set of options to increase the actual SMB size which can be delivered in situations where ISF was strengthened, i.e. fairly low ISF figure.\n\nUSE WITH CAUTION</string>
+    <string name="openapsama_enable_autoISF">Use autoISF feature</string>
+    <!-- END AutoISF ADAPTIONS -->>
+
     <string name="openapsma_max_basal_title">Max U/h a Temp Basal can be set to</string>
     <string name="openapsma_max_basal_summary">This value is called max basal in OpenAPS context</string>
     <string name="openapsma_max_iob_title">Maximum basal IOB OpenAPS can deliver [U]</string>
@@ -75,6 +113,17 @@
     <string name="openapsama_min_5m_carb_impact_summary">Default value: 3.0 (AMA) or 8.0 (SMB). This is a setting for default carb absorption impact per 5 minutes. The default is an expected 3mg/dl/5min. This affects how fast COB are decayed, and how much carb absorption is assumed in calculating future predicted BG, when BG is falling more than expected, or not rising as much as expected.</string>
     <string name="openapsama_max_daily_safety_multiplier_summary">Default value: 3 This is a key OpenAPS safety cap. What this does is limit your basals to be 3x (in this people) your biggest basal rate. You likely will not need to change this, but you should be aware that’s what is discussed about “3x max daily; 4x current” for safety caps.</string>
     <string name="openapsama_current_basal_safety_multiplier_summary">Default value: 4 This is the other half of the key OpenAPS safety caps, and the other half of “3x max daily; 4x current” of the safety caps. This means your basal, regardless of max basal set on your pump, cannot be any higher than this number times the current level of your basal. This is to prevent people from getting into dangerous territory by setting excessively high max basals before understanding how the algorithm works. Again, the default is 4x; most people will never need to adjust this and are instead more likely to need to adjust other settings if they feel like they are “running into” this safety cap.</string>
+
+    <!-- START AutoISF ADAPTIONS -->
+    <string name="openapsama_smb_delivery_ratio_summary">Default value: 0.5 This is another key OpenAPS safety cap, and specifies what share of the total insulin required can be delivered as SMB. This is to prevent people from getting into dangerous territory by setting SMB requests from the caregivers phone at the same time. Increase this experimental value slowly and with caution.</string>
+    <string name="openapsama_smb_delivery_ratio_min_summary">Default value: 0.5 This is the lower end of a linearly increasing ratio rather than the fix value above.</string>
+    <string name="openapsama_smb_delivery_ratio_max_summary">Default value: 0.5 This is the upper end of a linearly increasing ratio rather than the fix value above.</string>
+    <string name="openapsama_smb_delivery_ratio_bg_range_summary">Default value: 0. The linearly increasing SMB delivery ratio is mapped to the glucose range [target_bg, target_bg+bg_range].\nAt target_bg the SMB ratio is smb_delivery_ratio_min, at target_bg+bg_range it is smb_delivery_ratio_max\nWith 0 the linearly increasing SMB ratio is disabled and the fixed smb_delivery_ratio is used.</string>
+    <string name="openapsama_smb_max_range_extension_summary">Default value: 1 This is another key OpenAPS safety cap, and specifies by what factor you can exceed the regular 120 maxSMB/maxUAM minutes. Increase this experimental value slowly and with caution.</string>
+    <string name="key_openapsama_autosens_max" translatable="false">autosens_max</string>
+    <!-- END AutoISF ADAPTIONS -->
+
+
     <string name="openapsama_bolus_snooze_dia_divisor_summary">Default value: 2\nBolus snooze is enacted after you do a meal bolus, so the loop won’t counteract with low temps when you’ve just eaten. The example here and default is 2; so a 3 hour DIA means that bolus snooze will be gradually phased out over 1.5 hours (3DIA/2).</string>
     <string name="openapsama_link_to_preference_json_doc_txt">Attention!\nNormally you do not have to change these values below. Please CLICK HERE and READ the text and make sure you UNDERSTAND it before change any of these values.</string>
     <string name="openapsama_link_to_preference_json_doc" translatable="false">http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-3/beyond-low-glucose-suspend.html</string>
@@ -82,6 +131,17 @@
     <string name="always_use_short_avg_summary">Useful when data from unfiltered sources like xDrip+ gets noisy.</string>
     <string name="openapsama_max_daily_safety_multiplier">Max daily safety multiplier</string>
     <string name="openapsama_current_basal_safety_multiplier">Current basal safety multiplier</string>
+
+
+    <!-- START AutoISF ADAPTIONS -->
+    <string name="openapsama_smb_delivery_ratio">fixed SMB delivery ratio\n(smb_delivery_ratio)</string>
+    <string name="openapsama_smb_delivery_ratio_min">variable SMB delivery ratio, lower end\n(smb_delivery_ratio_min)</string>
+    <string name="openapsama_smb_delivery_ratio_max">variable SMB delivery ratio, upper end\n(smb_delivery_ratio_max)</string>
+    <string name="openapsama_smb_delivery_ratio_bg_range">variable SMB delivery ratio, mapped glucose range\n(smb_delivery_ratio_bg_range)</string>
+    <string name="openapsama_smb_max_range_extension">SMB/UAM max range extension\n(smb_max_range_extension)</string>
+    <!-- END AutoISF ADAPTIONS -->
+
+
     <string name="openapssmb_max_iob_title">Maximum total IOB OpenAPS can\'t go over [U]</string>
     <string name="openapssmb_max_iob_summary">This value is called Max IOB in OpenAPS context\nOpenAPS will not add more insulin if current IOB is greater than this value</string>
     <string name="enable_uam">Enable UAM</string>

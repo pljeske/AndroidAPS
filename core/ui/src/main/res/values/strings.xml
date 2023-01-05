@@ -47,6 +47,16 @@
     <string name="success">Success</string>
     <string name="advancedsettings_title">Advanced Settings</string>
     <string name="extendedbolusdeliveryerror">Extended bolus delivery error</string>
+
+
+    <!-- START AutoISF ADAPTIONS -->
+    <string name="key_enable_dura_ISF_with_COB" translatable="false">enable_dura_ISF_with_COB</string>
+    <string name="enableautoISFwithcob">Enable dura_ISF with COB</string>
+    <string name="enableautoISFwithcob_summary">Enable dura_ISF when there is COB active</string>
+    <string name="enable_postprandial_ISF_always">Enable pp_ISF postprandial all day</string>
+    <!-- END AutoISF ADAPTIONS -->
+
+
     <string name="aps_mode_title">APS Mode</string>
     <string name="extended_bolus">Extended bolus</string>
     <string name="paused">Paused</string>

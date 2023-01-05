@@ -18,8 +18,53 @@
     <string name="openapsama_autosens_period_summary">Amount of hours in the past for sensitivity detection (carbs absorption time is excluded)</string>
     <string name="openapsama_autosens_max_summary">Default value: 1.2\nThis is a multiplier cap for autosens (and soon autotune) to set a 20%% max limit on how high the autosens ratio can be, which in turn determines how high autosens can adjust basals, how low it can adjust ISF, and how low it can set the BG target.</string>
     <string name="openapsama_autosens_min_summary">Default value: 0.7\nThe other side of the autosens safety limits, putting a cap on how low autosens can adjust basals, and how high it can adjust ISF and BG targets.</string>
+
+
+    <!-- START AutoISF ADAPTIONS -->
+    <string name="key_openapsama_autoISF_max" translatable="false">autoISF_max</string>
+    <string name="key_openapsama_autoISF_min" translatable="false">autoISF_min</string>
+    <string name="openapsama_autoISF_max_summary">Default value: 1.2\nThis is a multiplier cap for autoISF to set a limit on how high the autoISF ratio can be, which in turn determines how low it can adjust ISF.\n\nWARNING: Be exteremely careful when using vales above 2.5</string>
+    <string name="openapsama_autoISF_min_summary">Default value: 1.0\nThis is a multiplier cap for autoISF to set a limit on how low the autoISF ratio can be, which in turn determines how high it can adjust ISF.</string>
+    <string name="key_openapsama_dura_ISF_weight" translatable="false">dura_ISF_weight</string>
+    <string name="openapsama_dura_ISF_weight_summary">Default value: 0.0\nThis is the rate at which autoISF grows per hour assuming bg is twice the target. With a value of 1.0 it will have reduced ISF to 50% after 1 hour of bg at twice the target.\n\nWith 0.0 the effect of autoISF is effectively disabled.</string>
+    <string name="key_openapsama_lower_ISFrange_weight" translatable="false">lower_ISFrange_weight</string>
+    <string name="openapsama_lower_ISFrange_weight_summary">Default value: 0.0\nThis is the weight applied to the polygon which adapats ISF if glucose is below target. \n\nWith 0.0 the effect is effectively disabled.</string>
+    <string name="key_openapsama_higher_ISFrange_weight" translatable="false">higher_ISFrange_weight</string>
+    <string name="openapsama_higher_ISFrange_weight_summary">Default value: 0.0\nThis is the weight applied to the polygon which adapats ISF if glucose is above target. \n\nWith 0.0 the effect is effectively disabled.</string>
+    <string name="key_openapsama_delta_ISFrange_weight" translatable="false">delta_ISFrange_weight</string>
+    <string name="openapsama_delta_ISFrange_weight_summary">Default value: 0.0\nThis is the weight applied to the polygon which adapats ISF for higher deltas. \n\nWith 0.0 the effect is effectively disabled.</string>
+    <string name="key_openapsama_pp_ISF_weight" translatable="false">pp_ISF_weight</string>
+    <string name="openapsama_pp_ISF_weight_summary">Default value: 0.0\nThis is the weight applied to the linear slope while glucose rises and which adapts ISF. \n\nWith 0.0 this contribution is effectively disabled.</string>
+    <string name="key_openapsama_pp_ISF_hours" translatable="false">pp_ISF_hours</string>
+    <string name="openapsama_pp_ISF_hours_summary">Default value: 3\nThis is the duration in hours how long after a meal the effect will be active. \n\nAAPS will delete carb timing after 10 hours latest no matter what you enter.</string>
+    <string name="key_enable_postprandial_ISF_always" translatable="false">enable_postprandial_ISF_always</string>
+    <string name="enable_postprandial_ISF_always_summary">Enable the postprandial ISF adaptation all the time regardless of when the last meal was taken.</string>
+    <string name="key_openapsama_bgAccel_ISF_weight" translatable="false">bgAccel_ISF_weight</string>
+    <string name="openapsama_bgAccel_ISF_weight_summary">Default value: 0.0\nThis is the weight applied while glucose accelerates and which strengthens ISF. \n\nWith 0.0 this contribution is effectively disabled.</string>
+    <string name="key_openapsama_bgBrake_ISF_weight" translatable="false">bgBrake_ISF_weight</string>
+    <string name="openapsama_bgBrake_ISF_weight_summary">Default value: 0.0\nThis is the weight applied while glucose decelerates and which weakens ISF. \n\nWith 0.0 this contribution is effectively disabled.</string>
+    <!-- END AutoISF ADAPTIONS -->
+
+
     <string name="openapsama_autosens_max">Max autosens ratio</string>
     <string name="openapsama_autosens_min">Min autosens ratio</string>
+
+    <!-- START AutoISF ADAPTIONS -->
+    <string name="openapsama_autoISF_max">Max autoISF ratio\n(autoISF_max)</string>
+    <string name="openapsama_autoISF_min">Min autoISF ratio\n(autoISF_min)</string>
+    <string name="openapsama_lower_ISFrange_weight">lower ISF-range weight\n(lower_ISFrange_weight)</string>
+    <string name="openapsama_higher_ISFrange_weight">higher ISF-range weight\n(higher_ISFrange_weight)</string>
+    <string name="openapsama_delta_ISFrange_weight">delta ISF-range weight\n(delta_ISFrange_weight)</string>
+    <string name="openapsama_pp_ISF_weight">postprandial ISF weight\n(pp_ISF_weight)</string>
+    <string name="openapsama_pp_ISF_hours">postprandial ISF time window\n(pp_ISF_hours)</string>
+    <string name="openapsama_bgAccel_ISF_weight">Weight while BG accelerates\n(bgAccel_ISF_weight)</string>
+    <string name="openapsama_bgBrake_ISF_weight">Weight while BG decelerates\n(bgBrake_ISF_weight)</string>
+    <string name="openapsama_dura_ISF_weight">dura_ISF weight\n(dura_ISF_weight)</string>
+    <string name="enableSMB_EvenOn_OddOff">Enable alternative activation of SMB depending on TempTarget</string>
+    <string name="key_enableSMB_EvenOn_OddOff" translatable="false">Enable alternative activation of SMB</string>
+    <string name="enableSMB_EvenOn_OddOff_summary">ON   if TempTarget is even number\nOFF if TempTarget is odd number</string>
+    <!-- END AutoISF ADAPTIONS -->
+
     <string name="openapsama_min_5m_carb_impact" translatable="false">min_5m_carbimpact</string>
     <string name="openapsama_min_5m_carb_impact_summary">Default value: 3.0 (AMA) or 8.0 (SMB). This is a setting for default carb absorption impact per 5 minutes. The default is an expected 3mg/dl/5min. This affects how fast COB are decayed, and how much carb absorption is assumed in calculating future predicted BG, when BG is falling more than expected, or not rising as much as expected.</string>
     <string name="absorption_cutoff_title">Meal max absorption time [h]</string>
